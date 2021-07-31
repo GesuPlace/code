@@ -51,7 +51,7 @@
 	dx=(32*end.x+end.pixel_x)-(32*start.x+start.pixel_x)
 	if(!dy)
 		return (dx>=0)?90:270
-	.=arctan(dx/dy)
+	.=_arctan(dx/dy)
 	if(dy<0)
 		.+=180
 	else if(dx<0)
@@ -600,7 +600,7 @@ Turf and target are seperate in case you want to teleport some distance from a t
 /proc/between(var/low, var/middle, var/high)
 	return max(min(middle, high), low)
 
-proc/arctan(x)
+proc/_arctan(x)
 	var/y=arcsin(x/sqrt(1+x*x))
 	return y
 
@@ -875,7 +875,7 @@ proc/anim(turf/location as turf,target as mob|obj,a_icon,a_icon_state as text,fl
 						corner.density = 1
 						corner.anchored = 1
 						corner.icon = X.icon
-						corner.icon_state = replacetext(X.icon_state, "_s", "_f")
+						corner.icon_state = _replacetext(X.icon_state, "_s", "_f")
 						corner.tag = "delete me"
 						corner.name = "wall"
 
@@ -895,7 +895,7 @@ proc/anim(turf/location as turf,target as mob|obj,a_icon,a_icon_state as text,fl
 						// Reset the shuttle corners
 						if(O.tag == "delete me")
 							X.icon = 'icons/turf/shuttle.dmi'
-							X.icon_state = replacetext(O.icon_state, "_f", "_s") // revert the turf to the old icon_state
+							X.icon_state = _replacetext(O.icon_state, "_f", "_s") // revert the turf to the old icon_state
 							X.name = "wall"
 							del(O) // prevents multiple shuttle corners from stacking
 							continue
@@ -1372,7 +1372,7 @@ var/list/WALLITEMS = list(
 	return 0
 
 /proc/format_text(text)
-	return replacetext(replacetext(text,"\proper ",""),"\improper ","")
+	return _replacetext(_replacetext(text,"\proper ",""),"\improper ","")
 
 /proc/topic_link(var/datum/D, var/arglist, var/content)
 	if(istype(arglist,/list))

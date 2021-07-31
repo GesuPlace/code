@@ -278,7 +278,7 @@ datum/preferences
 	dat += "<br><b>Custom Loadout:</b> "
 	var/total_cost = 0
 
-	if(!islist(gear)) gear = list()
+	if(!_islist(gear)) gear = list()
 
 	if(gear && gear.len)
 		dat += "<br>"
@@ -962,7 +962,7 @@ datum/preferences
 
 				var/total_cost = 0
 
-				if(isnull(gear) || !islist(gear)) gear = list()
+				if(isnull(gear) || !_islist(gear)) gear = list()
 
 				if(gear && gear.len)
 					for(var/gear_name in gear)
@@ -1118,7 +1118,7 @@ datum/preferences
 
 				var/total_cost = 0
 
-				if(isnull(gear) || !islist(gear)) gear = list()
+				if(isnull(gear) || !_islist(gear)) gear = list()
 
 				if(gear && gear.len)
 					for(var/gear_name in gear)
@@ -1136,7 +1136,7 @@ datum/preferences
 
 		else if(href_list["task"] == "remove")
 
-			if(isnull(gear) || !islist(gear))
+			if(isnull(gear) || !_islist(gear))
 				gear = list()
 			if(!gear.len)
 				return

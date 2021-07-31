@@ -18,7 +18,7 @@
 		if(!result)
 			return null
 
-		if(islist(result))
+		if(_islist(result))
 			var/list/R = result
 			if(R.len == 0)
 				return null
@@ -233,4 +233,3 @@
 			if(C.d1 == 0 && (C.powernet == P))
 				return 1
 		return 0
-

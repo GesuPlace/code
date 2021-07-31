@@ -245,7 +245,7 @@ Buildable meters
 		"scrubbers pipe cap", \
 	)
 	name = nlist[pipe_type+1] + " fitting"
-	var/list/islist = list( \
+	var/list/_islist = list( \
 		"simple", \
 		"simple", \
 		"he", \
@@ -293,7 +293,7 @@ Buildable meters
 		"cap", \
 		"cap", \
 	)
-	icon_state = islist[pipe_type + 1]
+	icon_state = _islist[pipe_type + 1]
 
 //called when a turf is attacked with a pipe item
 /obj/item/pipe/afterattack(turf/simulated/floor/target, mob/user, proximity)

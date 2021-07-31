@@ -161,7 +161,7 @@
 
 /proc/ismuton(var/block,var/mob/M)
 	return isblockon(getblock(M.dna.struc_enzymes, block,3),block)
-
+/*
 /proc/randmutb(mob/M as mob)
 	if(!M)	return
 	var/num
@@ -171,7 +171,7 @@
 	newdna = setblock(M.dna.struc_enzymes,num,toggledblock(getblock(M.dna.struc_enzymes,num,3)),3)
 	M.dna.struc_enzymes = newdna
 	return
-
+ */
 /proc/randmutg(mob/M as mob)
 	if(!M)	return
 	var/num

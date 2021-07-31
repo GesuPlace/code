@@ -425,7 +425,7 @@ proc/populate_seed_list()
 						chems[rid][i] = gene_chem[i]
 
 			var/list/new_gasses = gene.values[3]
-			if(islist(new_gasses))
+			if(_islist(new_gasses))
 				if(!exude_gasses) exude_gasses = list()
 				exude_gasses |= new_gasses
 				for(var/gas in exude_gasses)

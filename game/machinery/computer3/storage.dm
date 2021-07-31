@@ -23,7 +23,7 @@
 
 	New()
 		..()
-		if(islist(spawnfiles))
+		if(_islist(spawnfiles))
 			if(removeable && spawnfiles.len)
 				var/obj/item/part/computer/storage/removable/R = src
 				R.inserted = new(src)

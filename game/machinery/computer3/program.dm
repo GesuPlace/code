@@ -37,7 +37,7 @@ Programs are a file that can be executed
 
 /datum/file/program/proc/decode(text)
 		//adds line breaks
-		text = replacetext(text, "\n","<BR>")
+		text = _replacetext(text, "\n","<BR>")
 		return text
 
 
@@ -396,9 +396,3 @@ Programs are a file that can be executed
 	image = 'icons/ntos/alerts.png'
 	active_state = "computer_generic"
 	volume = 10150
-
-
-
-
-
-

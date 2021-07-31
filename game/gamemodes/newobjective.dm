@@ -139,7 +139,9 @@
 				if(!theftobjectives.len)
 					continue
 				var/datum/objective/objective = pickweight(theftobjectives)
-				for(1 to 10)
+				var/tmp1 = 1
+				var/tmp2 = 10
+				for(tmp1 in tmp2)
 					if(objective.points + total_weight <= 100 || !theftobjectives.len)
 						break
 					theftobjectives -= objective
@@ -153,7 +155,9 @@
 				if(!frameobjectives.len)
 					continue
 				var/datum/objective/objective = pickweight(frameobjectives)
-				for(1 to 10)
+				var/tmp1 = 1
+				var/tmp2 = 10
+				for(tmp1 in tmp2)
 					if(objective.points + total_weight <= 100 || !frameobjectives.len)
 						break
 					frameobjectives -= objective
@@ -178,7 +182,9 @@
 					continue
 				var/datum/objective/assassinate/objective = pickweight(killobjectives)
 				world << objective
-				for(1 to 10)
+				var/tmp1 = 1
+				var/tmp2 = 10
+				for(tmp1 in tmp2)
 					if(objective.points + total_weight <= 100 || !killobjectives.len)
 						break
 					killobjectives -= objective
@@ -202,7 +208,9 @@
 				if(!protectobjectives.len)
 					continue
 				var/datum/objective/protection/objective = pickweight(protectobjectives)
-				for(1 to 10)
+				var/tmp1 = 1
+				var/tmp2 = 10
+				for(tmp1 in tmp2)
 					if(objective.points + total_weight <= 100 || !protectobjectives.len)
 						break
 					protectobjectives -= objective

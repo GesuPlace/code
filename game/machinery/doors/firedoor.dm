@@ -1,3 +1,4 @@
+
 /var/const/OPEN = 1
 /var/const/CLOSED = 2
 
@@ -22,7 +23,7 @@
 	open_layer = DOOR_OPEN_LAYER - 0.01 // Just below doors when open
 	closed_layer = DOOR_CLOSED_LAYER + 0.01 // Just above doors when closed
 
-	//These are frequenly used with windows, so make sure zones can pass. 
+	//These are frequenly used with windows, so make sure zones can pass.
 	//Generally if a firedoor is at a place where there should be a zone boundery then there will be a regular door underneath it.
 	block_air_zones = 0
 
@@ -110,7 +111,7 @@
 		o += "[pressure]kPa</span></li>"
 		user << o
 
-	if(islist(users_to_open) && users_to_open.len)
+	if(_islist(users_to_open) && users_to_open.len)
 		var/users_to_open_string = users_to_open[1]
 		if(users_to_open.len >= 2)
 			for(var/i = 2 to users_to_open.len)
@@ -272,7 +273,7 @@
 				spawn(0)
 					close()
 			return
-		
+
 	return ..()
 
 // CHECK PRESSURE

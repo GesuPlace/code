@@ -273,7 +273,7 @@
 	return 1
 
 
-
+/*
 mob/living/carbon/human/proc
 	RevConvert(mob/M as mob in oview(src))
 		set name = "Rev-Convert"
@@ -298,3 +298,4 @@ mob/living/carbon/human/proc
 					M << "\red You reject this traitorous cause!"
 					src << "\red <b>[M] does not support the revolution!</b>"
 				M.mind.rev_cooldown = world.time+50
+ */

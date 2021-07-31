@@ -11,7 +11,7 @@
 	include_user = 1
 	centcomm_cancast = 0 //Prevent people from getting to centcomm
 
-	var phaseshift = 0
+	var/phaseshift = 0
 	var/jaunt_duration = 50 //in deciseconds
 
 /obj/effect/proc_holder/spell/targeted/ethereal_jaunt/cast(list/targets) //magnets, so mostly hardcoded
@@ -19,7 +19,7 @@
 		spawn(0)
 
 			if(target.buckled)
-				var/obj/structure/stool/bed/buckled_to = target.buckled.
+				var/obj/structure/stool/bed/buckled_to = target.buckled
 				buckled_to.unbuckle()
 
 			var/mobloc = get_turf(target.loc)

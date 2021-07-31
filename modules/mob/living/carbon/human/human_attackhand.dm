@@ -137,7 +137,7 @@
 						70.5% chance you hit a random other organ
 						 2.2% chance you miss
 
-					If aiming for something else:
+					If aiming for something else
 						23.2% chance you hit your target organ
 						56.8% chance you hit a random other organ
 						15.0% chance you miss

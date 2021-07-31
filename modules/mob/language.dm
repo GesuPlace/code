@@ -154,7 +154,7 @@
 
 	var/new_name = ..()
 	while(findtextEx(new_name,"sss",1,null))
-		new_name = replacetext(new_name, "sss", "ss")
+		new_name = _replacetext(new_name, "sss", "ss")
 	return capitalize(new_name)
 
 /datum/language/tajaran

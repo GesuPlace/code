@@ -385,7 +385,7 @@
 /obj/machinery/mecha_part_fabricator/proc/add_part_set_to_queue(set_name)
 	if(set_name in part_sets)
 		var/list/part_set = part_sets[set_name]
-		if(islist(part_set))
+		if(_islist(part_set))
 			for(var/obj/item/part in part_set)
 				add_to_queue(part)
 	return

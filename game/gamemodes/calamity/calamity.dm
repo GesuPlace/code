@@ -242,7 +242,7 @@
 				filtered_antags |= candidate
 				already_assigned_candidates |= candidate
 
-	if(filtered_antags && islist(filtered_antags))
+	if(filtered_antags && _islist(filtered_antags))
 		return filtered_antags
 	else
 		return list(filtered_antags)
