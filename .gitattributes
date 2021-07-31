@@ -2,16 +2,61 @@
 * text=auto
 
 # Custom for Visual Studio
-*.cs     diff=csharp
+*.cs diff=csharp
 
 # Standard to msysgit
-*.doc	 diff=astextplain
-*.DOC	 diff=astextplain
+*.doc  diff=astextplain
+*.DOC  diff=astextplain
 *.docx diff=astextplain
 *.DOCX diff=astextplain
 *.dot  diff=astextplain
 *.DOT  diff=astextplain
 *.pdf  diff=astextplain
-*.PDF	 diff=astextplain
-*.rtf	 diff=astextplain
-*.RTF	 diff=astextplain
+*.PDF  diff=astextplain
+*.rtf  diff=astextplain
+*.RTF  diff=astextplain
+
+## Enforce text mode and LF line breaks
+*.bat  text eol=lf
+*.cjs  text eol=lf
+*.css  text eol=lf
+*.dm   text eol=lf
+*.dme  text eol=lf
+*.dmf  text eol=lf
+*.htm  text eol=lf
+*.html text eol=lf
+*.js   text eol=lf
+*.json text eol=lf
+*.jsx  text eol=lf
+*.md   text eol=lf
+*.ps1  text eol=lf
+*.py   text eol=lf
+*.scss text eol=lf
+*.sh   text eol=lf
+*.sql  text eol=lf
+*.svg  text eol=lf
+*.ts   text eol=lf
+*.tsx  text eol=lf
+*.txt  text eol=lf
+*.yaml text eol=lf
+*.yml  text eol=lf
+
+## Enforce binary mode
+*.bmp binary
+*.dll binary
+*.dmb binary
+*.exe binary
+*.gif binary
+*.jpg binary
+*.png binary
+*.so  binary
+
+## Merger hooks, run tools/hooks/install.bat or install.sh to set up
+*.dmm text   eol=lf merge=dmm
+*.dmi binary        merge=dmi
+
+## Force tab indents on dm files
+*.dm whitespace=indent-with-non-tab
+
+## Force changelog merging to use union
+html/changelog.html text eol=lf merge=union

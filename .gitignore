@@ -1,43 +1,79 @@
-# Windows image file caches
+# ignore misc BYOND files
 Thumbs.db
-ehthumbs.db
+*.log
+*.int
+*.rsc
+*.dmb
+*.lk
+*.backup
+*.before
+data/
+dmdoc/
+cfg/
+build_log.txt
+use_map
+stopserver
+reboot_called
+atupdate
 
-# Folder config file
-Desktop.ini
+# sometimes something create backups of maps
+maps/*/backup/*.dmm
 
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
+# ignore config, but not subdirs
+!config/*/
+config/*
+sql/test_db
 
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
+# VisualStudioCode
+.vscode/*
+!.vscode/settings.json
+*.code-workspace
+.history
 
-# Windows shortcuts
-*.lnk
+# swap
+[._]*.s[a-v][a-z]
+[._]*.sw[a-p]
+[._]s[a-v][a-z]
+[._]sw[a-p]
 
-# =========================
-# Operating System Files
-# =========================
+# session
+Session.vim
 
-# OSX
-# =========================
+# temporary
+.netrwhist
+*~
 
-.DS_Store
-.AppleDouble
-.LSOverride
+# auto-generated tag files
+tags
 
-# Thumbnails
-._*
+# updater
+updater.bat
+updater.sh
+update_log.out
 
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
+# ignore built libs
+lib/*.dll
+lib/*.so
 
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+# python
+*.pyc
+__pycache__
+
+# flyway config
+flyway.conf
+
+#inf
+# linux
+nohup.out
+#/inf
+
+# https://github.com/SpaceManiac/SpacemanDMM
+data/minimaps
+
+cfg
+data
+config
+!config/custom_items
+!config/example
+!config/info
+!config/names
